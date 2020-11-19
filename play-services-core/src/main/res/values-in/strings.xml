@@ -87,7 +87,6 @@ Ini bisa berlangsung beberapa menit."</string>
     <string name="pref_gcm_enable_mcs_summary">Google Cloud Messaging adalah penyedia notifikasi push yang digunakan pada banyak aplikasi pihak ketiga. Untuk menggunakannya anda harus mengaktifkan device registration.</string>
 
     <string name="pref_about_title">Tentang Vanced microG</string>
-    <string name="pref_cast_double_fix">Perbaikan Cast terduplikasi</string>
 
     <string name="pref_switcher_title">Registrasi perangkat</string>
     <string name="pref_checkin_enable_summary">Registrasi perangkat anda ke layanan Google dan buat pengenal perangkat unik. Vanced microG strips mengenal bits selain dari akun Google anda dari data registrasi.</string>
@@ -120,6 +119,5 @@ Ini bisa berlangsung beberapa menit."</string>
     <string name="prefcat_push_apps_registered_title">Aplikasi yang teregistrasi</string>
     <string name="prefcat_push_apps_unregistered_title">Aplikasi yang tidak teregistrasi</string>
     <string name="prefcat_push_networks_title">Internet yang digunakan untuk notifikasi push</string>
-    <string name="pref_cast_double_fix_summary">Aktifkan ini jika anda melihat duplikasi di menu casting</string>
 
 </resources>

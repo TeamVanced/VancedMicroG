@@ -87,7 +87,6 @@ Esto puede tardar unos minutos."</string>
     <string name="pref_gcm_enable_mcs_summary">Google Cloud Messaging es un proveedor de notificaciónes push usado por muchas aplicaciones de terceros. Pará usarlo tienes que activar registro de dispositivos.</string>
 
     <string name="pref_about_title">Acerca de Vanced microG</string>
-    <string name="pref_cast_double_fix">Solucion para Cast duplicado</string>
 
     <string name="brand_spoof_button">Huawei</string>
 
@@ -122,6 +121,5 @@ Esto puede tardar unos minutos."</string>
     <string name="prefcat_push_apps_registered_title">Apps registradas</string>
     <string name="prefcat_push_apps_unregistered_title">Apps no registradas</string>
     <string name="prefcat_push_networks_title">Redes para usar para notificaciones push</string>
-    <string name="pref_cast_double_fix_summary">Activa esto si ves duplicados en tu menú de cast</string>
 
 </resources>

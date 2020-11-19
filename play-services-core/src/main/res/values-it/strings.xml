@@ -87,7 +87,6 @@ Questo potrà richiedere un paio di minuti"</string>
     <string name="pref_gcm_enable_mcs_summary">Messaggistica Cloud Google è un fornitore di notifiche push presente in molte applicazioni di terze parti. Per utilizzarlo è necessario attivare la registrazione del dispositivo.</string>
 
     <string name="pref_about_title">Informazioni su Vanced microG</string>
-    <string name="pref_cast_double_fix">Correzione cast duplicato</string>
 
     <string name="pref_switcher_title">Registra dispositivo</string>
     <string name="pref_checkin_enable_summary">Registra il tuo dispositivo sui servizi Google e crea un identificatore univoco del dispositivo. Verranno rimossi dai Servizi Vanced microG alcuni bit utili per identificare i dati di registrazione, oltre al nome dell\'account Google.</string>
@@ -120,6 +119,5 @@ Questo potrà richiedere un paio di minuti"</string>
     <string name="prefcat_push_apps_registered_title">App registrate</string>
     <string name="prefcat_push_apps_unregistered_title">App non registrate</string>
     <string name="prefcat_push_networks_title">Reti utilizzate per le notifiche push</string>
-    <string name="pref_cast_double_fix_summary">Attiva questa opzione in caso di voci duplicate nel menù di trasmissione</string>
 
 </resources>

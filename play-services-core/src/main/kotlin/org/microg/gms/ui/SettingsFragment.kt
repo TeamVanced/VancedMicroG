@@ -12,7 +12,6 @@ import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.preference.Preference
 import androidx.preference.SwitchPreferenceCompat
-import com.google.android.gms.cast.media.CastMediaRouteProviderService
 import com.mgoogle.android.gms.R
 import org.microg.gms.checkin.CheckinClient
 import org.microg.gms.checkin.getCheckinServiceInfo
@@ -38,17 +37,6 @@ class SettingsFragment : ResourceSettingsFragment() {
             true
         }
         findPreference<Preference>(PREF_ABOUT)?.summary = getString(R.string.about_version_str, AboutFragment.getSelfVersion(context))
-
-        findPreference<SwitchPreferenceCompat>(PREF_CAST_DOUBLE_FIX_ENABLED)?.setOnPreferenceChangeListener { _, newValue ->
-            context?.packageManager?.setComponentEnabledSetting(
-                    ComponentName(requireActivity().applicationContext, CastMediaRouteProviderService::class.java),
-                    when (newValue) {
-                        true -> PackageManager.COMPONENT_ENABLED_STATE_DISABLED
-                        else -> PackageManager.COMPONENT_ENABLED_STATE_ENABLED
-                    },
-                    PackageManager.DONT_KILL_APP)
-            true
-        }
     }
 
     override fun onResume() {
