@@ -16,7 +16,6 @@
 
 package org.microg.gms.location;
 
-import android.Manifest;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.location.Location;
@@ -35,10 +34,7 @@ import org.microg.gms.common.Utils;
 import java.util.ArrayList;
 import java.util.List;
 
-import static android.Manifest.permission.ACCESS_COARSE_LOCATION;
-import static android.Manifest.permission.ACCESS_FINE_LOCATION;
 import static android.content.pm.PackageManager.PERMISSION_GRANTED;
-import static android.location.LocationManager.GPS_PROVIDER;
 import static com.google.android.gms.location.LocationRequest.PRIORITY_HIGH_ACCURACY;
 
 public class GoogleLocationManager implements LocationChangeListener {
@@ -52,12 +48,7 @@ public class GoogleLocationManager implements LocationChangeListener {
 
     public GoogleLocationManager(Context context) {
         this.context = context;
-        LocationManager locationManager = (LocationManager) context.getSystemService(Context.LOCATION_SERVICE);
-        if (Utils.hasSelfPermissionOrNotify(context, Manifest.permission.ACCESS_FINE_LOCATION)) {
-            this.gpsProvider = new RealLocationProvider(locationManager, GPS_PROVIDER, this);
-        } else {
-            this.gpsProvider = null;
-        }
+        this.gpsProvider = null;
         mockProvider = new MockLocationProvider(this);
     }
 
@@ -89,11 +80,11 @@ public class GoogleLocationManager implements LocationChangeListener {
     }
 
     private boolean hasCoarseLocationPermission() {
-        return context.checkCallingPermission(ACCESS_COARSE_LOCATION) == PERMISSION_GRANTED || hasFineLocationPermission();
+        return false;
     }
 
     private boolean hasFineLocationPermission() {
-        return context.checkCallingPermission(ACCESS_FINE_LOCATION) == PERMISSION_GRANTED;
+        return false;
     }
 
     private boolean hasMockLocationPermission() {
@@ -190,7 +181,7 @@ public class GoogleLocationManager implements LocationChangeListener {
     public void onLocationChanged() {
         for (int i = 0; i < currentRequests.size(); i++) {
             LocationRequestHelper request = currentRequests.get(i);
-            if (!request.report(getLocation(request.initialHasFinePermission, request.initialHasCoarsePermission))) {
+            if (!request.report(getLocation(false, false))) {
                 removeLocationUpdates(request);
                 i--;
             }

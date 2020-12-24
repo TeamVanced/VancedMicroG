@@ -62,8 +62,8 @@ import java.util.Arrays;
  * may fuse the results from several sources into a single Location object.
  * <p/>
  * Location requests from applications with
- * {@link android.Manifest.permission#ACCESS_COARSE_LOCATION} and not
- * {@link android.Manifest.permission#ACCESS_FINE_LOCATION} will be automatically throttled to a
+ * ACCESS_COARSE_LOCATION and not
+ * ACCESS_FINE_LOCATION will be automatically throttled to a
  * slower interval, and the location object will be obfuscated to only show a coarse level of
  * accuracy.
  * <p/>

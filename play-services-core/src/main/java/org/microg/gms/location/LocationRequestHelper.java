@@ -36,15 +36,10 @@ import com.google.android.gms.location.internal.LocationRequestUpdateData;
 
 import java.util.Arrays;
 
-import static android.Manifest.permission.ACCESS_COARSE_LOCATION;
-import static android.Manifest.permission.ACCESS_FINE_LOCATION;
-
 public class LocationRequestHelper {
     public static final String TAG = "GmsLocRequestHelper";
     private final Context context;
     public final LocationRequest locationRequest;
-    public final boolean initialHasFinePermission;
-    public final boolean initialHasCoarsePermission;
     public final String packageName;
     public final int uid;
     private final boolean selfHasAppOpsRights;
@@ -60,9 +55,6 @@ public class LocationRequestHelper {
         this.locationRequest = locationRequest;
         this.packageName = packageName;
         this.uid = uid;
-
-        this.initialHasFinePermission = context.getPackageManager().checkPermission(ACCESS_FINE_LOCATION, packageName) == PackageManager.PERMISSION_GRANTED;
-        this.initialHasCoarsePermission = context.getPackageManager().checkPermission(ACCESS_COARSE_LOCATION, packageName) == PackageManager.PERMISSION_GRANTED;
 
         this.selfHasAppOpsRights = context.getPackageManager().checkPermission("android.permission.UPDATE_APP_OPS_STATS", context.getPackageName()) == PackageManager.PERMISSION_GRANTED;
     }
@@ -168,17 +160,17 @@ public class LocationRequestHelper {
 
     public boolean hasFinePermission() {
         if (Build.VERSION.SDK_INT >= 19) {
-            return isAppOpsAllowed(AppOpsManager.OPSTR_FINE_LOCATION, initialHasFinePermission);
+            return isAppOpsAllowed(AppOpsManager.OPSTR_FINE_LOCATION, false);
         } else {
-            return initialHasFinePermission;
+            return false;
         }
     }
 
     public boolean hasCoarsePermission() {
         if (Build.VERSION.SDK_INT >= 19) {
-            return isAppOpsAllowed(AppOpsManager.OPSTR_COARSE_LOCATION, initialHasCoarsePermission);
+            return isAppOpsAllowed(AppOpsManager.OPSTR_COARSE_LOCATION, false);
         } else {
-            return initialHasCoarsePermission;
+            return false;
         }
     }
 

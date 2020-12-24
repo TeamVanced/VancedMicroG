@@ -16,7 +16,6 @@
 
 package org.microg.gms.auth;
 
-import android.Manifest;
 import android.accounts.Account;
 import android.accounts.AccountManager;
 import android.content.ContentProvider;
@@ -63,8 +62,6 @@ public class AccountContentProvider extends ContentProvider {
             if (packagesForUid != null && packagesForUid.length != 0)
                 Log.w(TAG, "Not granting extended access to " + Arrays.toString(packagesForUid)
                         + ", signature: " + PackageUtils.firstSignatureDigest(getContext(), packagesForUid[0]));
-            if (getContext().checkCallingPermission(Manifest.permission.GET_ACCOUNTS) != PackageManager.PERMISSION_GRANTED)
-                throw new SecurityException("Access denied, missing GET_ACCOUNTS or EXTENDED_ACCESS permission");
         }
         if (PROVIDER_METHOD_GET_ACCOUNTS.equals(method)) {
             Bundle result = new Bundle();
