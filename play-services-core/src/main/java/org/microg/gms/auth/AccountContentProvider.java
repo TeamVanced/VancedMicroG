@@ -72,7 +72,7 @@ public class AccountContentProvider extends ContentProvider {
                     accounts = am.getAccountsByTypeForPackage(arg, packageName);
                 }
                 if (accounts == null || accounts.length == 0) {
-                    accounts = am.getAccountsByType(arg);
+                    accounts = new Account[0];
                 }
             }
             if (accounts == null) {

@@ -134,9 +134,6 @@ public class AuthManager {
     }
 
     public boolean accountExists() {
-        for (Account refAccount : getAccountManager().getAccountsByType(accountType)) {
-            if (refAccount.name.equalsIgnoreCase(accountName)) return true;
-        }
         return false;
     }
 

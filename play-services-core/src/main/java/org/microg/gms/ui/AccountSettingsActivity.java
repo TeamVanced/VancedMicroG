@@ -53,19 +53,7 @@ public class AccountSettingsActivity extends AbstractSettingsActivity {
             super.onCreatePreferences(savedInstanceState, rootKey);
             Preference pref = findPreference(PREF_AUTH_VISIBLE);
             if (pref != null) {
-                if (Build.VERSION.SDK_INT < Build.VERSION_CODES.O) {
-                    pref.setVisible(false);
-                } else {
-                    pref.setOnPreferenceChangeListener((preference, newValue) -> {
-                        if (newValue instanceof Boolean) {
-                            AccountManager am = AccountManager.get(getContext());
-                            for (Account account : am.getAccountsByType(AuthConstants.DEFAULT_ACCOUNT_TYPE)) {
-                                am.setAccountVisibility(account, PACKAGE_NAME_KEY_LEGACY_NOT_VISIBLE, (Boolean) newValue ? VISIBILITY_USER_MANAGED_VISIBLE : VISIBILITY_USER_MANAGED_NOT_VISIBLE);
-                            }
-                        }
-                        return true;
-                    });
-                }
+                pref.setVisible(false);
             }
         }
     }
