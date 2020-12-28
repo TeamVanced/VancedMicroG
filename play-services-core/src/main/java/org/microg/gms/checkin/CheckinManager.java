@@ -36,6 +36,7 @@ public class CheckinManager {
     private static final String TAG = "GmsCheckinManager";
     private static final long MIN_CHECKIN_INTERVAL = 3 * 60 * 60 * 1000; // 3 hours
 
+    @SuppressWarnings("MissingPermission")
     public static synchronized LastCheckinInfo checkin(Context context, boolean force) throws IOException {
         LastCheckinInfo info = LastCheckinInfo.read(context);
         if (!force && info.lastCheckin > System.currentTimeMillis() - MIN_CHECKIN_INTERVAL)

@@ -431,6 +431,7 @@ public class LoginActivity extends AssistantActivity {
             return null;
         }
 
+        @SuppressWarnings("MissingPermission")
         @JavascriptInterface
         public final String getAccounts() {
             Log.d(TAG, "JSBridge: getAccounts");
