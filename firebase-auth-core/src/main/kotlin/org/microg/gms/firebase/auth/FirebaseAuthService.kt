@@ -21,6 +21,8 @@ import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.lifecycleScope
 import com.google.android.gms.common.api.CommonStatusCodes
 import com.google.android.gms.common.api.Status
+import com.google.android.gms.common.internal.GetServiceRequest
+import com.google.android.gms.common.internal.IGmsCallbacks
 import com.google.firebase.auth.ActionCodeSettings
 import com.google.firebase.auth.EmailAuthCredential
 import com.google.firebase.auth.PhoneAuthCredential
@@ -28,6 +30,9 @@ import com.google.firebase.auth.UserProfileChangeRequest
 import com.google.firebase.auth.api.internal.*
 import org.json.JSONArray
 import org.json.JSONObject
+import org.microg.gms.BaseService
+import org.microg.gms.common.GmsService
+import org.microg.gms.common.PackageUtils
 
 private const val TAG = "GmsFirebaseAuth"
 
@@ -62,6 +67,19 @@ private fun Intent.getSmsMessages(): Array<SmsMessage> {
         Telephony.Sms.Intents.getMessagesFromIntent(this)
     } else {
         (getSerializableExtra("pdus") as? Array<ByteArray>)?.map { SmsMessage.createFromPdu(it) }.orEmpty().toTypedArray()
+    }
+}
+
+class FirebaseAuthService : BaseService(TAG, GmsService.FIREBASE_AUTH) {
+    override fun handleServiceRequest(callback: IGmsCallbacks, request: GetServiceRequest, service: GmsService?) {
+        PackageUtils.getAndCheckCallingPackage(this, request.packageName)
+        val apiKey = request.extras?.getString(Constants.EXTRA_API_KEY)
+        val libraryVersion = request.extras?.getString(Constants.EXTRA_LIBRARY_VERSION)
+        if (apiKey == null) {
+            callback.onPostInitComplete(CommonStatusCodes.DEVELOPER_ERROR, null, null)
+        } else {
+            callback.onPostInitComplete(0, FirebaseAuthServiceImpl(this, lifecycle, request.packageName, libraryVersion, apiKey).asBinder(), null)
+        }
     }
 }
 

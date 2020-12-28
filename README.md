@@ -18,7 +18,6 @@ This fork tweaks MicroG to be usable by applications that require Google authent
   - Droidguard
   - Exposure-Notifications
   - Feedback
-  - Firebase
   - Games
   - Maps
   - Recovery
