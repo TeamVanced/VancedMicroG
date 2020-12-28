@@ -2,7 +2,7 @@
  * SPDX-FileCopyrightText: 2020, microG Project Team
  * SPDX-License-Identifier: Apache-2.0
  */
-@file:Suppress("DEPRECATION")
+@file:Suppress("WARNINGS")
 
 package org.microg.gms.phenotype
 

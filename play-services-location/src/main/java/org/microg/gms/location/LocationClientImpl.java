@@ -46,7 +46,6 @@ public class LocationClientImpl extends GoogleLocationManagerClient {
     private NativeLocationClientImpl nativeLocation = null;
     private Map<LocationListener, ILocationListener> listenerMap = new HashMap<LocationListener, ILocationListener>();
 
-
     public LocationClientImpl(Context context, ConnectionCallbacks callbacks,
                               OnConnectionFailedListener connectionFailedListener) {
         super(context, callbacks, connectionFailedListener);

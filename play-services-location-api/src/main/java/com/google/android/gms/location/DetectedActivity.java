@@ -80,7 +80,6 @@ public class DetectedActivity extends AutoSafeParcelable {
     private DetectedActivity() {
     }
 
-
     /**
      * Constructs a DetectedActivity.
      *

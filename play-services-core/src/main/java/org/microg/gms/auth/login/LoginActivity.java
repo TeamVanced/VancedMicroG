@@ -431,7 +431,6 @@ public class LoginActivity extends AssistantActivity {
             return null;
         }
 
-        @SuppressWarnings("MissingPermission")
         @JavascriptInterface
         public final String getAccounts() {
             Log.d(TAG, "JSBridge: getAccounts");
@@ -555,7 +554,6 @@ public class LoginActivity extends AssistantActivity {
                 visibility |= STATUS_BAR_DISABLE_BACK;
             getWindow().getDecorView().setSystemUiVisibility(visibility);
         }
-
 
         @JavascriptInterface
         public final void setNewAccountCreated() {

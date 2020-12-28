@@ -19,8 +19,6 @@ package com.google.android.gms.cast.framework.internal;
 import android.os.Bundle;
 import android.os.RemoteException;
 import android.util.Log;
-
-
 import com.google.android.gms.cast.ApplicationMetadata;
 import com.google.android.gms.cast.CastDevice;
 import com.google.android.gms.cast.framework.ISession;

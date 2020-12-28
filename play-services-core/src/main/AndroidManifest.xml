@@ -348,7 +348,6 @@
             </intent-filter>
         </activity>
 
-
         <!-- Phenotype -->
 
         <provider
@@ -426,6 +425,12 @@
         <service android:name="org.microg.gms.cast.CastDeviceControllerService">
             <intent-filter>
                 <action android:name="com.google.android.gms.cast.service.BIND_CAST_DEVICE_CONTROLLER_SERVICE" />
+            </intent-filter>
+        </service>
+
+        <service android:name="org.microg.gms.firebase.dynamiclinks.DynamicLinksService">
+            <intent-filter>
+                <action android:name="com.google.firebase.dynamiclinks.service.START" />
             </intent-filter>
         </service>
 

@@ -48,7 +48,6 @@ import java.util.Map;
 import static android.location.LocationManager.KEY_LOCATION_CHANGED;
 import static android.location.LocationManager.KEY_PROXIMITY_ENTERING;
 
-@SuppressWarnings("MissingPermission")
 public class NativeLocationClientImpl {
     private final static String TAG = "GmsToNativeLocClient";
     private final static Criteria DEFAULT_CRITERIA = new Criteria();

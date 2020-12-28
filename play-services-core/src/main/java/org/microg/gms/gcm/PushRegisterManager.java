@@ -116,8 +116,6 @@ public class PushRegisterManager {
         });
     }
 
-
-
     private static Bundle handleResponse(GcmDatabase database, RegisterRequest request, RegisterResponse response, String requestId) {
         return handleResponse(database, request, response, null, requestId);
     }

@@ -19,7 +19,6 @@ import androidx.lifecycle.lifecycleScope
 import com.mgoogle.android.gms.R
 import com.mgoogle.android.gms.databinding.PushNotificationAppFragmentBinding
 
-
 class PushNotificationAppFragment : Fragment(R.layout.push_notification_fragment) {
     lateinit var binding: PushNotificationAppFragmentBinding
     val packageName: String?

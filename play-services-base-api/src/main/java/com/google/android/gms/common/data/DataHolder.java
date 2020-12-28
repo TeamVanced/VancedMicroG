@@ -152,7 +152,6 @@ public class DataHolder extends AutoSafeParcelable implements Closeable {
         return empty(statusCode, null);
     }
 
-    @SuppressWarnings("deprecation")
     @SuppressLint({"NewApi", "ObsoleteSdkInt"})
     static int getCursorType(Cursor cursor, int i) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
@@ -208,7 +207,6 @@ public class DataHolder extends AutoSafeParcelable implements Closeable {
         throw new RuntimeException("Not yet available");
     }
 
-    @SuppressWarnings("deprecation")
     private static CursorWindow[] createCursorWindows(Builder builder) {
         if (builder.columns.length == 0) return new CursorWindow[0];
         List<CursorWindow> windows = new ArrayList<>();

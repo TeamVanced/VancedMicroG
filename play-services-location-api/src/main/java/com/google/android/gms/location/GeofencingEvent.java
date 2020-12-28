@@ -98,7 +98,6 @@ public class GeofencingEvent {
         return geofenceTransition;
     }
 
-
     /**
      * Returns a list of geofences that triggered this geofence transition alert.
      *

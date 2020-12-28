@@ -45,7 +45,9 @@ public enum GmsService {
     PLACE_DETECTION(67, "com.google.android.gms.location.places.PlaceDetectionApi"),
     CREDENTIALS(68, "com.google.android.gms.auth.api.credentials.service.START"),
     MEASUREMENT(93, "com.google.android.gms.measurement.START"),
+    FIREBASE_AUTH(112, "com.google.firebase.auth.api.gms.service.START"),
     GASS(116, "com.google.android.gms.gass.START"),
+    DYNAMIC_LINKS(131, "com.google.firebase.dynamiclinks.service.START"),
     IDENTITY_SIGN_IN(212, "com.google.android.gms.auth.api.identity.service.signin.START"),
     ;
 

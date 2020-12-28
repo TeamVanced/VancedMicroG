@@ -243,7 +243,6 @@ public class Condition {
         private View.OnClickListener secondActionListener;
         private Evaluation evaluation;
 
-
         public Builder() {
         }
 

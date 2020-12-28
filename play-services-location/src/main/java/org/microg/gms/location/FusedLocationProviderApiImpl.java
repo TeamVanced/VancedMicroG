@@ -32,7 +32,6 @@ import com.google.android.gms.location.LocationServices;
 
 import org.microg.gms.common.GmsConnector;
 
-@SuppressWarnings("deprecation")
 public class FusedLocationProviderApiImpl implements FusedLocationProviderApi {
     private static final String TAG = "GmsFusedApiImpl";
 

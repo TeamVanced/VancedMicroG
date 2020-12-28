@@ -42,7 +42,6 @@ class DeviceRegistrationFragment : Fragment(R.layout.device_registration_fragmen
         binding.checkinEnabled = serviceInfo.configuration.enabled
     }
 
-
     override fun onResume() {
         super.onResume()
         lifecycleScope.launchWhenResumed {

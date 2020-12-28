@@ -55,6 +55,16 @@ public class DynamiteLoaderImpl extends IDynamiteLoader.Stub {
 
     @Override
     public int getModuleVersion2(IObjectWrapper context, String moduleId, boolean updateConfigIfRequired) throws RemoteException {
+        try {
+            return Class.forName("com.google.android.gms.dynamite.descriptors." + moduleId + ".ModuleDescriptor").getDeclaredField("MODULE_VERSION").getInt(null);
+        } catch (Exception e) {
+            Log.w(TAG, "No such module known: " + moduleId);
+        }
+
+        if (moduleId.equals("com.google.android.gms.firebase_database")) {
+            Log.d(TAG, "returning temp fix module version for " + moduleId + ". Firebase Database will not be functional!");
+            return com.google.android.gms.dynamite.descriptors.com.google.android.gms.firebase_database.ModuleDescriptor.MODULE_VERSION;
+        }
         if (moduleId.equals("com.google.android.gms.googlecertificates")) {
             return com.google.android.gms.dynamite.descriptors.com.google.android.gms.googlecertificates.ModuleDescriptor.MODULE_VERSION;
         }

@@ -85,7 +85,6 @@ public final class Cast {
      */
     public static final int STANDBY_STATE_YES = 1;
 
-
     /**
      * Token to pass to {@link GoogleApiClient.Builder#addApi(Api)} to enable the Cast features.
      */

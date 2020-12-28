@@ -15,7 +15,10 @@ include ':play-services-tasks'
 include ':play-services-core-proto'
 include ':play-services-conscrypt-provider-core'
 
-include ':play-services-core'
+include ':firebase-auth-api'
+include ':firebase-dynamic-links-api'
+
+include ':firebase-auth-core'
+
 include ':play-services-core:microg-ui-tools'
-
-
+include ':play-services-core'

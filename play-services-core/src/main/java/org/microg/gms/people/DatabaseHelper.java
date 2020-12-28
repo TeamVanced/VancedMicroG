@@ -73,7 +73,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String OWNERS_TABLE = "owners";
     public static final String CIRCLES_TABLE = "circles";
 
-
     public DatabaseHelper(Context context) {
         super(context, DB_NAME, null, DB_VERSION);
     }

@@ -135,7 +135,6 @@ public abstract class Task<TResult> {
      */
     public abstract Task<TResult> addOnFailureListener(Executor executor, OnFailureListener listener);
 
-
     /**
      * Adds a listener that is called if the Task completes successfully.
      * <p/>
@@ -170,7 +169,6 @@ public abstract class Task<TResult> {
      * @return this Task
      */
     public abstract Task<TResult> addOnSuccessListener(Activity activity, OnSuccessListener<? super TResult> listener);
-
 
     /**
      * Returns a new Task that will be completed with the result of applying the specified

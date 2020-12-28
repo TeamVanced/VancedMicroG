@@ -46,7 +46,6 @@ public class PeopleServiceImpl extends IPeopleService.Stub {
         this.context = context;
     }
 
-    @SuppressWarnings("MissingPermission")
     @Override
     public void loadOwners(final IPeopleCallbacks callbacks, boolean var2, boolean var3, final String accountName, String var5, int sortOrder) {
         Log.d(TAG, "loadOwners: " + var2 + ", " + var3 + ", " + accountName + ", " + var5 + ", " + sortOrder);

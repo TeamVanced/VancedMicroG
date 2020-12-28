@@ -37,6 +37,4 @@ public class FusedLocationProviderClient extends GoogleApi<Api.ApiOptions.NoOpti
     public Task<Location> getLastLocation() {
         return scheduleTask((InstantGoogleApiCall<Location, LocationClientImpl>) LocationClientImpl::getLastLocation);
     }
-
-
 }

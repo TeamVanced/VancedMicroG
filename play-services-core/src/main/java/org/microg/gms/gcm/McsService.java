@@ -299,7 +299,6 @@ public class McsService extends Service implements Handler.Callback {
         currentDelay = 0;
     }
 
-
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         ForegroundServiceContext.completeForegroundService(this, intent, TAG);

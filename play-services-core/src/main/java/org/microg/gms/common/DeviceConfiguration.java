@@ -98,7 +98,6 @@ public class DeviceConfiguration {
         Collections.sort(this.glExtensions);
     }
 
-    @SuppressWarnings({"deprecation", "InlinedApi"})
     private static List<String> getNativePlatforms() {
         List<String> nativePlatforms;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {

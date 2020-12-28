@@ -76,7 +76,6 @@ public class GoogleApiAvailability {
         return instance;
     }
 
-
     /**
      * Returns a dialog to address the provided errorCode. The returned dialog displays a localized
      * message about the error and upon user confirmation (by tapping on dialog) will direct them

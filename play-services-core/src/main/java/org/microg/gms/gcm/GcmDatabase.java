@@ -144,7 +144,6 @@ public class GcmDatabase extends SQLiteOpenHelper {
         return Collections.emptyList();
     }
 
-
     public synchronized List<Registration> getRegistrationsByApp(String packageName) {
         SQLiteDatabase db = getReadableDatabase();
         Cursor cursor = db.query(TABLE_REGISTRATIONS, null, FIELD_PACKAGE_NAME + " LIKE ?", new String[]{packageName}, null, null, null);
@@ -172,7 +171,6 @@ public class GcmDatabase extends SQLiteOpenHelper {
         cv.put(FIELD_WAKE_FOR_DELIVERY, wakeForDelivery ? 1 : 0);
         db.update(TABLE_APPS, cv, FIELD_PACKAGE_NAME + " LIKE ?", new String[]{packageName});
     }
-
 
     public synchronized void removeApp(String packageName) {
         SQLiteDatabase db = getWritableDatabase();
@@ -294,8 +292,6 @@ public class GcmDatabase extends SQLiteOpenHelper {
         return null;
     }
 
-
-    @SuppressWarnings("deprecation")
     private void importLegacyData(SQLiteDatabase db) {
         db.beginTransaction();
 

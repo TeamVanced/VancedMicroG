@@ -44,7 +44,6 @@ public class LocationSettingsResult extends AutoSafeParcelable implements Result
     @SafeParceled(2)
     private LocationSettingsStates settings;
 
-
     /**
      * Retrieves the location settings states.
      */

@@ -23,7 +23,6 @@ public class DeviceIdentifier {
     public String meid = randomMeid();
     public String esn;
 
-
     private static String randomMacAddress() {
         StringBuilder mac = new StringBuilder("b407f9");
         Random rand = new Random();

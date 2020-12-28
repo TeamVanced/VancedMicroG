@@ -55,8 +55,6 @@ class ServiceInfoReceiver : BroadcastReceiver() {
     }
 }
 
-
-
 private suspend fun sendToServiceInfoReceiver(intent: Intent, context: Context): ServiceInfo = suspendCoroutine {
     context.registerReceiver(object : BroadcastReceiver() {
         override fun onReceive(context: Context, intent: Intent) {
