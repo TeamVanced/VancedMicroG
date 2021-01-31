@@ -31,6 +31,7 @@ import java.util.Arrays;
 
 import kotlin.Suppress;
 
+@SuppressWarnings("deprecation")
 public class GetServiceRequest extends AutoSafeParcelable {
     @SafeParceled(1)
     private int versionCode = 3;

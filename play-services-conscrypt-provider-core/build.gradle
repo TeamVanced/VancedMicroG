@@ -4,10 +4,12 @@
  */
 
 apply plugin: 'com.android.library'
-apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-android-extensions'
-apply plugin: 'maven-publish'
-apply plugin: 'signing'
+
+dependencies {
+    implementation "org.microg.gms:conscrypt-gmscore:2.5.1"
+    implementation "androidx.annotation:annotation:$annotationVersion"
+    implementation project(":play-services-core")
+}
 
 android {
     compileSdkVersion androidCompileSdk
@@ -19,20 +21,8 @@ android {
         targetSdkVersion androidTargetSdk
     }
 
-    sourceSets {
-        main.java.srcDirs += 'src/main/kotlin'
-    }
-
     compileOptions {
         sourceCompatibility = 1.8
         targetCompatibility = 1.8
     }
-}
-
-dependencies {
-    api project(':play-services-base')
-    api project(':play-services-droidguard-api')
-
-    implementation "androidx.annotation:annotation:$annotationVersion"
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.4.21"
 }

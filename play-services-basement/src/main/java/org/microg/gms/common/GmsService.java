@@ -29,6 +29,7 @@ public enum GmsService {
     LOCATION_REPORTING(22, "com.google.android.gms.location.reporting.service.START", "com.google.android.location.reporting.service.START"),
     LOCATION_MANAGER(23, "com.google.android.location.internal.GoogleLocationManagerService.START"),
     PLAY_LOG(24, "com.google.android.gms.playlog.service.START"),
+    DROIDGUARD(25, "com.google.android.gms.droidguard.service.START"),
     CAST_MIRRORING(27, "com.google.android.gms.cast_mirroring.service.START"),
     SEARCH_ADMINISTRATION(30),
     SEARCH_QUERIES(32),
