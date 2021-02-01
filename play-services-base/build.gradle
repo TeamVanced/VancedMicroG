@@ -33,6 +33,8 @@ android {
 }
 
 dependencies {
+    implementation 'com.google.android.gms:play-services-base:17.5.0'
+
     api project(':play-services-basement')
     api project(':play-services-tasks')
     api project(':play-services-base-api')
