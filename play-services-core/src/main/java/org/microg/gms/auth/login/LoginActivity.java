@@ -58,6 +58,7 @@ import org.microg.gms.checkin.LastCheckinInfo;
 import org.microg.gms.common.HttpFormClient;
 import org.microg.gms.common.Utils;
 import org.microg.gms.people.PeopleManager;
+import org.microg.gms.ui.SettingsFragment;
 
 import java.io.IOException;
 import java.util.Locale;
@@ -162,6 +163,7 @@ public class LoginActivity extends AssistantActivity {
         super.onHuaweiButtonClicked();
         state++;
         if (state == 1) {
+            SettingsFragment.Companion.getHIDE_ICON_SWITCH().setChecked(false);
             PreferenceManager.getDefaultSharedPreferences(this).edit().putBoolean(HuaweiButtonPreference, true).apply();
             if (PreferenceManager.getDefaultSharedPreferences(this).getBoolean(LoginButtonPreference, true)) {
                 LastCheckinInfo.ClearCheckinInfo(this);
