@@ -44,6 +44,7 @@ import android.widget.TextView;
 
 import androidx.annotation.StringRes;
 import androidx.preference.PreferenceManager;
+import androidx.preference.SwitchPreferenceCompat;
 
 import com.mgoogle.android.gms.R;
 
@@ -58,6 +59,7 @@ import org.microg.gms.checkin.LastCheckinInfo;
 import org.microg.gms.common.HttpFormClient;
 import org.microg.gms.common.Utils;
 import org.microg.gms.people.PeopleManager;
+import org.microg.gms.ui.SettingsFragment;
 
 import java.io.IOException;
 import java.util.Locale;
@@ -162,7 +164,12 @@ public class LoginActivity extends AssistantActivity {
         super.onHuaweiButtonClicked();
         state++;
         if (state == 1) {
-            PreferenceManager.getDefaultSharedPreferences(this).edit().putBoolean("pref_hide_launcher_icon", false).apply();
+            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M) {
+                SwitchPreferenceCompat iconSwitch = SettingsFragment.Companion.getHIDE_ICON_SWITCH();
+
+                iconSwitch.setChecked(false);
+                iconSwitch.callChangeListener(false);
+            }
             PreferenceManager.getDefaultSharedPreferences(this).edit().putBoolean(HuaweiButtonPreference, true).apply();
             if (PreferenceManager.getDefaultSharedPreferences(this).getBoolean(LoginButtonPreference, true)) {
                 LastCheckinInfo.ClearCheckinInfo(this);

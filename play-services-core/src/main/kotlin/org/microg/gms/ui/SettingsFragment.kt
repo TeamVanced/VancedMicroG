@@ -52,6 +52,7 @@ class SettingsFragment : ResourceSettingsFragment() {
             true
         }
 
+        HIDE_ICON_SWITCH = findPreference<SwitchPreferenceCompat>(PREF_CAST_HIDE_LAUNCHER_ICON);
         findPreference<SwitchPreferenceCompat>(PREF_CAST_HIDE_LAUNCHER_ICON)?.apply {
             if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M) {
                 setOnPreferenceChangeListener { _, newValue ->
@@ -93,6 +94,7 @@ class SettingsFragment : ResourceSettingsFragment() {
     }
 
     companion object {
+        var HIDE_ICON_SWITCH: SwitchPreferenceCompat? = null;
         const val PREF_ABOUT = "pref_about"
         const val PREF_GCM = "pref_gcm"
         const val PREF_CHECKIN = "pref_checkin"
