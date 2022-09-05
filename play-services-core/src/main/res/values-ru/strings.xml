@@ -35,9 +35,9 @@
     <string name="auth_connecting">"Устанавливаем соединение с Google для авторизации.
 
 Это может занять несколько минут."</string>
-    <string name="no_network_error_desc">"У вас не подключения к сети.
+    <string name="no_network_error_desc">"У вас нет подключения к сети.
 	
-Это может быть временной проблемой или ваше устройство может не иметь доступа в интернет. Попробуйте подключиться еще раз используя мобильный интернет или сеть Wi-Fi."</string>
+Это может быть временной проблемой, или ваше устройство может не иметь доступа в интернет. Попробуйте подключиться еще раз, используя мобильный интернет или сеть Wi-Fi."</string>
     <string name="auth_general_error_desc">"Не удалось подключиться к серверам Google.
 
 Попробуйте позже."</string>
@@ -46,8 +46,8 @@
 Это может занять несколько минут."</string>
 
     <string name="perm_status_broadcast_label">прослушивать внутренние сообщения о состоянии</string>
-    <string name="perm_c2dm_receive_label">прослушивать C2DM сообщения</string>
-    <string name="perm_c2dm_send_label">отправлять C2DM сообщения to other apps</string>
+    <string name="perm_c2dm_receive_label">прослушивать C2DM-сообщения</string>
+    <string name="perm_c2dm_send_label">отправлять C2DM-сообщения to other apps</string>
     <string name="perm_gtalk_svc_label">обменивайтся сообщениями и получать уведомления о синхронизации с серверов Google</string>
     <string name="perm_extended_access_label">Расширенный доступ к сервисам Google</string>
 
@@ -77,21 +77,21 @@
 
     <string name="prefs_account">Настройки аккаунта</string>
     <string name="prefs_account_privacy">Конфиденциальность</string>
-    <string name="prefs_account_security">Вход и безопастность</string>
+    <string name="prefs_account_security">Вход и безопасность</string>
 
     <string name="pref_auth_trust_google_title">Доверять Google разрешения приложений</string>
     <string name="pref_auth_trust_google_summary">Если отключено, пользователь приложение будет спращивать пользователя до того, как запрос авторизации будет отправлен в Google. Некоторые приложения не смогут использовать аккаунт в Google если эта опция отключена.</string>
-    <string name="pref_auth_visible_title">Разрешить приложениям находить аккауниы</string>
-    <string name="pref_auth_visible_summary">Если включено, приложения на вашем устройстве могут увидеть ваш email-адрес от Google аккаунта.</string>
+    <string name="pref_auth_visible_title">Разрешить приложениям находить аккаунты</string>
+    <string name="pref_auth_visible_summary">Если включено, приложения на вашем устройстве могут увидеть ваш email-адрес от Google-аккаунта.</string>
 
     <string name="pref_add_account_title">Аккаунт</string>
     <string name="pref_add_account_summary">Добавить аккаунт Google</string>
-    <string name="pref_gcm_switcher_title">Получать push-уведомления</string>
+    <string name="pref_gcm_switcher_title">Получать пуш-уведомления</string>
     <string name="pref_gcm_enable_mcs_summary">Cloud Messaging позволяет получать уведомления от многих приложений. Чтобы использовать GCM, включите регистрацию устройства в Google.</string>
 
     <string name="pref_about_title">О Vanced microG</string>
     <string name="pref_cast_double_fix">Исправление двух кнопок трансляции</string>
-    <string name="hideLauncherIcon">скрыть микрог из лаунчера</string>
+    <string name="hideLauncherIcon">Скрыть microG из лончера</string>
 
     <string name="brand_spoof_button">Huawei</string>
 
@@ -125,6 +125,6 @@
     <string name="prefcat_push_apps_registered_title">Зарегистрированные приложения</string>
     <string name="prefcat_push_apps_unregistered_title">Приложения без регистрации</string>
     <string name="prefcat_push_networks_title">Тип сети для получения уведомлений</string>
-    <string name="pref_cast_double_fix_summary">Включите это если у вас появляются копии устройств в меню трансляции</string>
+    <string name="pref_cast_double_fix_summary">Включите, если у вас появляются копии устройств в меню трансляции</string>
 
 </resources>
